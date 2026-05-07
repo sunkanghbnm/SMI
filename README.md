@@ -33,19 +33,33 @@ Reproducible Results: Fixed random seeds and deterministic execution for academi
 
 ## Project Structure
 ├── smsi.py # Core SMSI calculation and statistical utility functions
+
 ├── run_test.py # Main entry point: full pipeline execution
+
 ├── data_loader.py # HSI dataset loading utilities
+
 ├── config.py # Global configuration (dataset paths, parameters)
+
 ├── algorithms/ # Implementation of all band selection algorithms
+
 │ ├── basic_utils.py # Basic statistical and similarity functions
+
 │ ├── mvpca_bs.py # MVPCA algorithm
+
 │ ├── eca_bs.py # ECA algorithm
+
 │ ├── max_covmatrix_det_bs.py # MCD algorithm
+
 │ ├── self_representation_bs.py # Self-representation based algorithm
+
 │ ├── similarity_ranking_bs.py # Similarity ranking based algorithm
+
 │ ├── uniform_sample_bs.py # Uniform sampling baselines
+
 │ └── subspace_partition.py # Subspace partitioning methods
+
 ├── datasets/ # Directory for storing .mat format HSI datasets
+
 └── results/ # Auto-generated output directory
 
 ## Requirements
