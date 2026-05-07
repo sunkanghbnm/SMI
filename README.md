@@ -1,4 +1,3 @@
-@ -1,2 +1,97 @@
 # SMI
  Hyperspectral Band Selection Benchmark with SMI. A high-performance, parallelized benchmark framework for hyperspectral image (HSI) band selection, featuring the Spectral Markov Strength Index (SMI) based subspace partitioning method.
  "Markov Prior-Based Uniform Subspace Partitioning: An Universal Enhancement Framework for Hyperspectral Band Selection"
@@ -72,14 +71,14 @@ Reproducible Results: Fixed random seeds and deterministic execution for academi
 Place your hyperspectral datasets in .mat format in the datasets/ directory
 2. Update config.py to add your dataset paths:
 
-### Example config.py
-DATASET_PATHS = {
-    "indianpines": ("indianpines.mat", "indianpines_gt.mat"),
-    "pavia": ("Pavia.mat", "Pavia_gt.mat"),
-    "salinas": ("Salinas.mat", "Salinas_gt.mat")
-}
-BASE_DATA_DIR = "./datasets"
-OUTPUT_DIR = "./results"
+    Example config.py
+    DATASET_PATHS = {
+        "indianpines": ("indianpines.mat", "indianpines_gt.mat"),
+        "pavia": ("Pavia.mat", "Pavia_gt.mat"),
+        "salinas": ("Salinas.mat", "Salinas_gt.mat")
+    }
+    BASE_DATA_DIR = "./datasets"
+    OUTPUT_DIR = "./results"
 
 3. Run the Full Pipeline
 The main entry point is run_test.py, which executes the complete pipeline:
@@ -89,7 +88,7 @@ The main entry point is run_test.py, which executes the complete pipeline:
     Evaluate classification performance with statistical significance analysis
 4. Control Execution Steps
 In run_test.py, use these three boolean flags to control which parts of the pipeline run:
-### In process_single_dataset() function
+    In process_single_dataset() function
     is_run_smi = True   # Compute statistical metrics and SMSI
     is_run_bs = True    # Run all band selection algorithms
     is_run_eva = True   # Evaluate classification performance
