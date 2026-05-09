@@ -95,12 +95,12 @@ In run_test.py, use these three boolean flags to control which parts of the pipe
     Note: Set flags to False to skip completed steps and save time. Precomputed results are automatically loaded from cache.
 5. Output Results
 All results are automatically saved in the ./results/{dataset_name}/ directory:
-    Cached statistical matrices: .npy files for all precomputed similarity matrices
-    Band selection results: .npy files containing selected band indices for each algorithm
-    Classification results:
+   Cached statistical matrices: .npy files for all precomputed similarity matrices
+   Band selection results: .npy files containing selected band indices for each algorithm
+   Classification results:
     {dataset}_classification_results_raw.csv: Raw accuracy values for all 10 runs
     {dataset}_classification_results_summary.csv: Statistical summary (mean, std, p-values vs baselines)
-    Statistical Significance: Results marked with * indicate p < 0.05, ** indicate p < 0.01 (two-sided paired t-test vs corresponding baseline algorithm)
+   Statistical Significance: Results marked with * indicate p < 0.05, ** indicate p < 0.01 (two-sided paired t-test vs corresponding baseline algorithm)
 ## Supported Band Selection Algorithms
 
     MVPCA	MVPCA, MVPCA-SMI, MVPCA-OCF, MVPCA-ASPS, MVPCA-GPC, MVPCA-WALUMI
